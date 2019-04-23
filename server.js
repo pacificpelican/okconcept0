@@ -26,21 +26,6 @@ let subscriptions_collection = "okconceptdevcollection";
 
 var MongoClient = require("mongodb").MongoClient;
 
-// let updateDocument = function(collectionName) {
-
-//   MongoClient.connect(mongoAddress, function(err, db) {
-//   // Get the documents collection
-//   let collection = db.collection(`${collectionName}`);
-//   // Update document where a is 2, set b equal to 1
-//   collection.updateOne({ [objval] : objkey }
-//     , { $set: { [objval] : newVal } }, function(err, result) {
-//     assert.equal(err, null);
-//     assert.equal(1, result.result.n);
-//     console.log("Updated the document");
-//     console.log(result);
-//   });  
-// }
-
 function postDataWildcard(
   db,
   table,
@@ -79,166 +64,15 @@ function deleteDataWildcard(
   console.log("to delete: " + tuple);
   console.log("from " + table);
   MongoClient.connect(mongoAddress, function(err, db) {
-    // Get the documents collection
     let collection = db.collection(`${collectionName}`);
-    // Update document where a is 2, set b equal to 1
     console.log(collection);
     collection.deleteOne({ locator : parseInt(tuple) }
       , function(err, result) {
-      // assert.equal(err, null);
-      // assert.equal(1, result.result.n);
       console.log("Updated the document - deleted");
-    // console.log(result);
     });  
   });
-
-  // console.log("collection to update: " + table);
-  // let dbDirectory = __dirname + "/db/" + db + ".json";
-  // console.log("loki dir: " + dbDirectory);
-  // let db2 = new loki(dbDirectory);
-
-  // db2.loadDatabase({}, () => {
-  //   let _collection = db2.getCollection(table);
-
-  //   if (!_collection) {
-  //     console.log(
-  //       "Collection %s does not exist. Aborting attempt to edit ",
-  //       table
-  //     );
-  //     throw new Error("ERROR: collection does not exist");
-  //   } else {
-  //     console.log(table + " collection exists");
-  //   }
-  //   console.log(_collection);
-  //   console.log("tuple: " + tuple);
-
-  //   _collection.findAndRemove({ locator: { $aeq: tuple } });
-  //   db2.saveDatabase();
-
     console.log("record removed (💣🤷)");
-  // });
 }
-
-//   console.log(db, tuple, table);
-//   console.log("collection to update: " + table);
-//   let dbDirectory = __dirname + "/db/" + db + ".json";
-//   console.log("loki dir: " + dbDirectory);
-//   let db2 = new loki(dbDirectory);
-
-//   db2.loadDatabase({}, () => {
-//     let _collection = db2.getCollection(table);
-
-//     if (!_collection) {
-//       console.log(
-//         "Collection %s does not exist. Aborting attempt to edit ",
-//         table
-//       );
-
-//       throw new Error("ERROR: collection does not exist");
-//     } else {
-//       console.log(table + " collection exists");
-//     }
-//     console.log(_collection);
-
-//     console.log(objval);
-//     let objkeyString = objkey.toString();
-//     let objvalString = objval.toString();
-
-//     console.log(`${objkeyString}`);
-
-//     let record;
-
-//     console.log("tuple: " + tuple);
-
-//     record = _collection.findObject({
-//       locator: { $aeq: tuple },
-//       [objkeyString]: { $contains: objvalString }
-//     });
-
-//     if (record === null) {
-//       record = _collection.findObject({ locator: { $aeq: tuple } });
-//     }
-
-//     if (record === null) {
-//       record = _collection.findObject({
-//         [objkeyString]: { $contains: objvalString }
-//       });
-//     }
-
-//     console.log(record);
-//     console.log(newVal);
-
-//     if (
-//       typeof record[`${objkeyString}`] !== "undefined" &&
-//       record[`${objkeyString}`] !== null
-//     ) {
-//       console.log("0 levels deep in object; key: " + objkeyString);
-//       record[`${objkeyString}`] = newVal;
-//     } else {
-//       console.log("going 1 level deep in object");
-//       console.log(record);
-
-//       Object.keys(record).forEach(function(item) {
-//         console.log(item); // key
-//         console.log(record[item]); // value
-
-//         if (
-//           typeof record[item][`${objkeyString}`] !== "undefined" &&
-//           record[item][`${objkeyString}`] !== null
-//         ) {
-//           console.log(
-//             "1 levels deep in object; " + record[item][`${objkeyString}`]
-//           );
-//           record[item][`${objkeyString}`] = newVal;
-//         } else {
-//           console.log("going 2 levels deep in object");
-//           console.log(record[item]);
-
-//           Object.keys(record[item]).forEach(function(item2) {
-//             console.log(item2); // key
-//             console.log(record[item][item2]); // value
-
-//             if (
-//               typeof record[item][item2][`${objkeyString}`] !== "undefined" &&
-//               record[item][item2][`${objkeyString}`] !== null
-//             ) {
-//               console.log(
-//                 "2 levels deep in object;" +
-//                   record[item][item2][`${objkeyString}`]
-//               );
-//               record[item][item2][`${objkeyString}`] = newVal;
-//             } else {
-//               console.log("going 3 levels deep in object");
-//               console.log(record[item][item2]);
-
-//               Object.keys(record[item][item2]).forEach(function(item3) {
-//                 console.log(item3); // key
-//                 console.log(record[item][item2][item3]); // value
-
-//                 if (
-//                   typeof record[item][item2][item3][`${objkeyString}`] !==
-//                     "undefined" &&
-//                   record[item][item2][item3][`${objkeyString}`] !== null
-//                 ) {
-//                   console.log(
-//                     "3 levels deep in object;" +
-//                       record[item][item2][item3][`${objkeyString}`]
-//                   );
-//                   record[item][item2][item3][`${objkeyString}`] = newVal;
-//                 } else {
-//                   console.log("object may require greater than 3 depth");
-//                 }
-//               });
-//             }
-//           });
-//         }
-//       });
-//     }
-//     _collection.update(record);
-
-//     db2.saveDatabase();
-//   });
-// }
 
 MongoClient.connect(mongoAddress, function(err, db) {
   if (err) {
@@ -253,8 +87,6 @@ MongoClient.connect(mongoAddress, function(err, db) {
       }
     });
 });
-
-let _id;
 
 app.prepare().then(() => {
   const server = express();
@@ -388,6 +220,34 @@ app.prepare().then(() => {
       res.send(Object.assign({}, { Response: "ok - POST update (remove)" }));
     }
   );
+
+  server.post(
+    "/api/1/saveobjectdatashallow/db/:db/obj/:obj/newdata/:newdata",
+    (req, res) => {
+      MongoClient.connect(mongoAddress, function(err, db) {
+        if (err) {
+          console.log(err);
+          throw err;
+        } else {
+          console.log("about to add tuple");
+          console.log(req.params.newdata);
+          let serverObject = JSON.parse(req.params.newdata);
+          //  serverObject = JSON.parse(serverObject);
+          console.log(serverObject);
+
+          let dbObject = Object.assign(serverObject, {
+            locator: Math.floor(Math.random() * locatorScale + 1),
+            created_at_time: Date.now()
+          });
+
+          console.log("tuple to save");
+          console.log(dbObject);
+          db.collection(req.params.obj).insertOne(dbObject);
+        }
+      });
+      //console.error(err);
+      console.log("data that should have been added " + req.params.newdata);
+    });
 
   server.get("*", (req, res) => {
     return handle(req, res);

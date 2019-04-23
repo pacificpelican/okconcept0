@@ -52,9 +52,9 @@ class About extends Component {
         <Card>
           <section id="propsInfo">
             <h3>OkConcept0</h3>
-            <h3><a href="http://okconcept0.pacificio.com">@</a></h3>
+            <h3><a href="http://okconcept0.pacificio.com">🆗</a></h3>
             <h6>
-              an object cycle manager by{" "}
+              an object cycle noSQL database manager by{" "}
               <a href="http://danmckeown.info">Dan McKeown</a>
             </h6>
             <br />
