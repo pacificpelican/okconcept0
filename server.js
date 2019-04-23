@@ -37,10 +37,18 @@ function postDataWildcard(
   console.log("trying to replace prop " + objkey);
   console.log("from " + objval + " to " + newVal);
   let collectionName = table;
+
   MongoClient.connect(mongoAddress, function(err, db) {
     // Get the documents collection
     let collection = db.collection(`${collectionName}`);
-    // Update document where a is 2, set b equal to 1
+    let record = collection;
+
+  if (
+    typeof record[`${objkey}`] !== "undefined" &&
+    record[`${objkeyg}`] !== null
+  ) {
+    console.log("0 levels deep in object; key: " + objkey);
+    //  record[`${objkeyString}`] = newVal;
     collection.updateOne(
       { [objkey]: objval },
       { $set: { [objkey]: newVal } },
@@ -51,6 +59,46 @@ function postDataWildcard(
         console.log(result);
       }
     );
+  } else {
+    console.log("object is more than 1 level deep in object: currently only updates top level properties");
+    console.log(record);
+
+    Object.keys(record).forEach(function(item) {
+      console.log(item); // key
+      console.log(record[item]); // value
+
+    //   if (
+    //     typeof record[item][`${objkey}`] !== "undefined" &&
+    //     record[item][`${objkey}`] !== null
+    //   ) {
+    //     console.log(
+    //       "1 levels deep in object; " + record[item][`${objkey}`]
+    //     );
+    //     //  record[item][`${objkeyString}`] = newVal;
+    //     collection.updateOne(
+    //       { [item] : { [objkey]: objval } }
+    //       ,
+    //       { $set: { [item] : {[objkey]: newVal} } },
+    //       function(err, result) {
+    //         // assert.equal(err, null);
+    //         // assert.equal(1, result.result.n);
+    //         console.log("Updated the document");
+    //         console.log(result);
+    //       }
+    //     );
+    //   } else {
+    //     // console.log("going 2 levels deep in object");
+    //     // console.log(record[item]);
+
+    //     // Object.keys(record[item]).forEach(function(item2) {
+    //     //   console.log(item2); // key
+    //     //   console.log(record[item][item2]); // value
+    //     // })
+    // }
+  });
+}
+    // Update document where a is 2, set b equal to 1
+    
   });
 }
 
