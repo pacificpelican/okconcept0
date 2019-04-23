@@ -31,13 +31,11 @@ class About extends Component {
           ⬅️ back
         </button>
 
-        <div id="joeypc">
-          <span id="animated">
-            {'🐕'}
-          </span>
-        </div>
-
         <Headernav />
+
+        <div id="joeypc">
+          <span id="animated">{"🐕"}</span>
+        </div>
 
         <h1 id="desk">
           About
@@ -52,7 +50,9 @@ class About extends Component {
         <Card>
           <section id="propsInfo">
             <h3>OkConcept0</h3>
-            <h3><a href="http://okconcept0.pacificio.com">🆗</a></h3>
+            <h3>
+              <a href="http://okconcept0.pacificio.com">🆗</a>
+            </h3>
             <h6>
               an object cycle noSQL database manager by{" "}
               <a href="http://danmckeown.info">Dan McKeown</a>
@@ -66,12 +66,12 @@ class About extends Component {
               <a href="/Objectbrowser">Objectbrowser</a>
             </li>
             <li>
-              After visualizing the object with the `enter your JSON` button you
-              can persist the data by pressing the `save to DB` button
+              After visualizing the object with the `enter JSON object` button
+              you can persist the data by pressing the `save to DB` button
             </li>
             <li>
-              Database is saved by default to the{" "}
-              <a href="../db/seisdb.json">/db/seisdb.json</a> file
+              Database is saved by default to the Mongo database at the{" "}
+              `mongodb://localhost:27017/` address
             </li>
             <li>
               These saved objects can be viewed at <a href="/Desk">Desk</a>{" "}

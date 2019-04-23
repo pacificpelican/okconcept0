@@ -41,13 +41,16 @@ function postDataWildcard(
     // Get the documents collection
     let collection = db.collection(`${collectionName}`);
     // Update document where a is 2, set b equal to 1
-    collection.updateOne({ [objkey] : objval }
-      , { $set: { [objkey] : newVal } }, function(err, result) {
-      // assert.equal(err, null);
-      // assert.equal(1, result.result.n);
-      console.log("Updated the document");
-      console.log(result);
-    });  
+    collection.updateOne(
+      { [objkey]: objval },
+      { $set: { [objkey]: newVal } },
+      function(err, result) {
+        // assert.equal(err, null);
+        // assert.equal(1, result.result.n);
+        console.log("Updated the document");
+        console.log(result);
+      }
+    );
   });
 }
 
@@ -58,7 +61,8 @@ function deleteDataWildcard(
   objval,
   objkey = "description",
   newVal = "__"
-) { //  the last 3 parameters can be null
+) {
+  //  the last 3 parameters can be null
   console.log(table, tuple);
   let collectionName = table;
   console.log("to delete: " + tuple);
@@ -66,12 +70,11 @@ function deleteDataWildcard(
   MongoClient.connect(mongoAddress, function(err, db) {
     let collection = db.collection(`${collectionName}`);
     console.log(collection);
-    collection.deleteOne({ locator : parseInt(tuple) }
-      , function(err, result) {
+    collection.deleteOne({ locator: parseInt(tuple) }, function(err, result) {
       console.log("Updated the document - deleted");
-    });  
+    });
   });
-    console.log("record removed (💣🤷)");
+  console.log("record removed (💣🤷)");
 }
 
 MongoClient.connect(mongoAddress, function(err, db) {
@@ -143,10 +146,7 @@ app.prepare().then(() => {
         .find()
         .toArray(function(err, result) {
           console.log(
-            "result of query for: " +
-              req.params.db +
-              " | " +
-              req.params.obj
+            "result of query for: " + req.params.db + " | " + req.params.obj
           );
           console.log(result);
           res.send(result);
@@ -178,7 +178,6 @@ app.prepare().then(() => {
           db.collection(req.params.obj).insertOne(dbObject);
         }
       });
-      //console.error(err);
       console.log("data that should have been added " + req.params.newdata);
     }
   );
@@ -197,7 +196,6 @@ app.prepare().then(() => {
         req.params.objkey,
         req.params.newval
       );
-
       res.send(Object.assign({}, { Response: "ok - POST update" }));
     }
   );
@@ -215,8 +213,7 @@ app.prepare().then(() => {
         null,
         null,
         null
-      );  //  the last 3 parameters can be null
-
+      ); //  the last 3 parameters can be null
       res.send(Object.assign({}, { Response: "ok - POST update (remove)" }));
     }
   );
@@ -245,9 +242,9 @@ app.prepare().then(() => {
           db.collection(req.params.obj).insertOne(dbObject);
         }
       });
-      //console.error(err);
       console.log("data that should have been added " + req.params.newdata);
-    });
+    }
+  );
 
   server.get("*", (req, res) => {
     return handle(req, res);
