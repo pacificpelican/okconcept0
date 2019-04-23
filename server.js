@@ -65,6 +65,60 @@ function postDataWildcard(
     });  
   });
 }
+
+function deleteDataWildcard(
+  db,
+  table,
+  tuple,
+  objval,
+  objkey = "description",
+  newVal = "__"
+) { //  the last 3 parameters can be null
+  console.log(table, tuple);
+  let collectionName = table;
+  console.log("to delete: " + tuple);
+  console.log("from " + table);
+  MongoClient.connect(mongoAddress, function(err, db) {
+    // Get the documents collection
+    let collection = db.collection(`${collectionName}`);
+    // Update document where a is 2, set b equal to 1
+    console.log(collection);
+    collection.deleteOne({ locator : parseInt(tuple) }
+      , function(err, result) {
+      // assert.equal(err, null);
+      // assert.equal(1, result.result.n);
+      console.log("Updated the document - deleted");
+    // console.log(result);
+    });  
+  });
+
+  // console.log("collection to update: " + table);
+  // let dbDirectory = __dirname + "/db/" + db + ".json";
+  // console.log("loki dir: " + dbDirectory);
+  // let db2 = new loki(dbDirectory);
+
+  // db2.loadDatabase({}, () => {
+  //   let _collection = db2.getCollection(table);
+
+  //   if (!_collection) {
+  //     console.log(
+  //       "Collection %s does not exist. Aborting attempt to edit ",
+  //       table
+  //     );
+  //     throw new Error("ERROR: collection does not exist");
+  //   } else {
+  //     console.log(table + " collection exists");
+  //   }
+  //   console.log(_collection);
+  //   console.log("tuple: " + tuple);
+
+  //   _collection.findAndRemove({ locator: { $aeq: tuple } });
+  //   db2.saveDatabase();
+
+    console.log("record removed (💣🤷)");
+  // });
+}
+
 //   console.log(db, tuple, table);
 //   console.log("collection to update: " + table);
 //   let dbDirectory = __dirname + "/db/" + db + ".json";
@@ -313,6 +367,25 @@ app.prepare().then(() => {
       );
 
       res.send(Object.assign({}, { Response: "ok - POST update" }));
+    }
+  );
+
+  server.post(
+    "/api/1/deletedata/db/:db/object/:obj/tuple/:tuple",
+    (req, res) => {
+      console.log("running (simple) delete POST route");
+      console.log("obj: " + req.params.obj);
+
+      deleteDataWildcard(
+        req.params.db,
+        req.params.obj,
+        req.params.tuple,
+        null,
+        null,
+        null
+      );  //  the last 3 parameters can be null
+
+      res.send(Object.assign({}, { Response: "ok - POST update (remove)" }));
     }
   );
 

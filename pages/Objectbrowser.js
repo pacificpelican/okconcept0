@@ -159,7 +159,7 @@ class Objectbrowser extends Component {
           />
           <br />
           <Button onClick={this.handleLookupButton} id="lookupDB">
-            enter your JSON
+            enter JSON object
           </Button>
         </section>
         <aside id="dbRequest">
