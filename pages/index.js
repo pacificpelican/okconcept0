@@ -13,7 +13,7 @@ export default () => (
       ⬅️ back
     </button>
     <Headernav />
-    <h2 id="six">{'⚅'}6️⃣ SEIS</h2>
+    <h2 id="six">{'⚅'}7️⃣ OkConcept0</h2>
     <h4>Components</h4>
     <ul id="seis">
       <li>

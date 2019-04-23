@@ -33,7 +33,7 @@ class About extends Component {
 
         <div id="joeypc">
           <span id="animated">
-            {'⚅'}
+            {'🐕'}
           </span>
         </div>
 
@@ -51,8 +51,8 @@ class About extends Component {
 
         <Card>
           <section id="propsInfo">
-            <h3>6️⃣</h3>
-            <h3><a href="http://seis.pacificio.com">seis</a></h3>
+            <h3>OkConcept0</h3>
+            <h3><a href="http://okconcept0.pacificio.com">@</a></h3>
             <h6>
               an object cycle manager by{" "}
               <a href="http://danmckeown.info">Dan McKeown</a>
