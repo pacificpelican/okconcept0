@@ -9,9 +9,9 @@ export default () => (
       <a href="http://okconcept0.pacificio.com">OkConcept0</a>{" via "}
       <a href="http://seis.pacificio.com">SEIS</a>{" "}&{" "}
       <a href="http://mlBench.pacificio.com">mlBench</a>{" "}
-      <a href="https://bitbucket.org/pacificpelican/mlbench/src/master/">💻</a>{" "}/{" "}
+      <a href="https://github.com/pacificpelican/mlBench">💻</a>{" "}/{" "}
       <a href="http://applepicker.pacificio.com">apple-picker</a>{" "}
-      <a href="https://bitbucket.org/pacificpelican/apple-picker/src/master/">
+      <a href="https://github.com/pacificpelican/apple-picker">
         💻
       </a>
     </b>
