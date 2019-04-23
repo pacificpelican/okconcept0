@@ -230,7 +230,7 @@ app.prepare().then(() => {
       }
       console.log("looking up data for tuple " + req.params.tuple);
       db.collection(req.params.obj)
-        .find({ tuple: { $eq: req.params.tuple } })
+        .find({ locator: { $eq: parseInt(req.params.tuple) } })
         .toArray(function(err, result) {
           console.log(
             "result of query for: " +
