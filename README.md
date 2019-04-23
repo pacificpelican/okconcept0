@@ -2,9 +2,38 @@
 
 *a port of [Seis](https://bitbucket.org/pacificpelican/seis/src) for MongoDB*
 
-*by [Dan McKeown](http://danmckeown.info) copyright 2019*
+*by [Dan McKeown](http://danmckeown.info) at [pacificIO](https://pacificio.com) copyright 2019*
 
 ===
+
+*QuickStart*
+
+___
+
+**for development:**
+___
+
+*Install and run the MongoDB database*
+
+```bash
+brew install mongodb
+brew services start mongodb
+# or
+**install MongoDB directly**
+mongod
+```
+
+*Install the app and run:*
+
+```bash
+npm install
+npm run dev
+# or
+yarn
+yarn dev
+```
+
+___
 
 [![Deploy to now](https://deploy.now.sh/static/button.svg)](https://deploy.now.sh/?repo=https://github.com/zeit/next.js/tree/master/examples/custom-server-express)
 
