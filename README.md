@@ -189,6 +189,16 @@ Deploy it to the cloud with [now](https://zeit.co/now) ([download](https://zeit.
 now
 ```
 
+---
+
+*Known Issues*
+
+- the Edit functionality will only edit top level object properties
+- arrays of JSON passed into Objectbrowser will not save since they are not objects
+- dev only: no ENV variables for production at the moment
+
+---
+
 ## The idea behind the example
 
 Most of the times the default Next server will be enough but sometimes you want to run your own server to customize routes or other kind of the app behavior. Next provides a [Custom server and routing](https://github.com/zeit/next.js#custom-server-and-routing) so you can customize as much as you want.
