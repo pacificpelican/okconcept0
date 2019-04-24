@@ -43,33 +43,44 @@ function postDataWildcard(
     let collection = db.collection(`${collectionName}`);
     let record = collection;
 
-    if (
-      typeof record[`${objkey}`] !== "undefined" &&
-      record[`${objkeyg}`] !== null
-    ) {
-      console.log("0 levels deep in object; key: " + objkey);
-      //  record[`${objkeyString}`] = newVal;
-      collection.updateOne(
-        { [objkey]: objval },
-        { $set: { [objkey]: newVal } },
-        function(err, result) {
-          // assert.equal(err, null);
-          // assert.equal(1, result.result.n);
-          console.log("Updated the document");
-          console.log(result);
-        }
-      );
-    } else {
-      console.log(
-        "object is more than 1 level deep in object: currently only updates top level properties"
-      );
-      console.log(record);
+    collection.updateOne(
+      { [objkey]: objval },
+      { $set: { [objkey]: newVal } },
+      function(err, result) {
+        // assert.equal(err, null);
+        // assert.equal(1, result.result.n);
+        console.log("Updated the document");
+        console.log(result);
+      }
+    );
 
-      Object.keys(record).forEach(function(item) {
-        console.log(item); // key
-        console.log(record[item]); // value
-      });
-    }
+    // if (
+    //   typeof record[`${objkey}`] !== "undefined" &&
+    //   record[`${objkeyg}`] !== null
+    // ) {
+    //   console.log("0 levels deep in object; key: " + objkey);
+    //   //  record[`${objkeyString}`] = newVal;
+    //   collection.updateOne(
+    //     { [objkey]: objval },
+    //     { $set: { [objkey]: newVal } },
+    //     function(err, result) {
+    //       // assert.equal(err, null);
+    //       // assert.equal(1, result.result.n);
+    //       console.log("Updated the document");
+    //       console.log(result);
+    //     }
+    //   );
+    // } else {
+    //   console.log(
+    //     "object is more than 1 level deep in object: currently only updates top level properties"
+    //   );
+    //   console.log(record);
+
+    //   Object.keys(record).forEach(function(item) {
+    //     console.log(item); // key
+    //     console.log(record[item]); // value
+    //   });
+    // }
   });
 }
 
