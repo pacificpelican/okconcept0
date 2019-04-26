@@ -1,6 +1,6 @@
 {
   "name": "OkConcept0",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "scripts": {
     "dev": "node server.js",
     "build": "next build",
@@ -23,7 +23,8 @@
     "object-array-converter": " ^1.0.1",
     "styled-components": "^4.2.0",
     "@smooth-ui/core-sc": "^10.0.4",
-    "mongodb": "^2.2.28"
+    "mongodb": "^2.2.28",
+    "cors": "^2.8.5"
   },
   "devDependencies": {
     "cross-env": "^5.2.0"

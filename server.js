@@ -6,6 +6,8 @@ const dev = process.env.NODE_ENV !== "production";
 const app = next({ dev });
 const handle = app.getRequestHandler();
 
+const cors = require('cors');
+
 let mongoUrl;
 let locatorScale = parseInt(1000000000);
 
@@ -123,6 +125,7 @@ MongoClient.connect(mongoAddress, function(err, db) {
 
 app.prepare().then(() => {
   const server = express();
+  server.use(cors())
 
   server.get("/a", (req, res) => {
     return app.render(req, res, "/a", req.query);
