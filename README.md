@@ -33,6 +33,7 @@ yarn
 yarn dev
 ```
 
+`open http://localhost:3011`
 ___
 
 <section id="propsInfo">
