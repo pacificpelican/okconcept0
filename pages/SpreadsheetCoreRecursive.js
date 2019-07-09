@@ -53,7 +53,7 @@ class SpreadsheetCoreRecursive extends Component {
                 );
               }
               if (i === keyArr.length - 1) {
-                retSet.push(<div className="endDividerHead" />);
+                retSet.push(<div key={i+keyArr[i]+valArr[i]+`headerDivider`} className="endDividerHead" />);
               }
             }
 
@@ -72,7 +72,7 @@ class SpreadsheetCoreRecursive extends Component {
                 );
               }
               if (i === keyArr.length - 1) {
-                retSet.push(<div className="endDivider" />);
+                retSet.push(<div key={i+keyArr[i]+valArr[i]+`valDivider`} className="endDivider" />);
               }
             }
 

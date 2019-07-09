@@ -66,7 +66,7 @@ class SpreadsheetCoreRecursiveClick extends Component {
                 );
               }
               if (i === keyArr.length - 1) {
-                retSet.push(<div className="endDividerHead" />);
+                retSet.push(<div key={i+keyArr[i]+valArr[i]+`header`} className="endDividerHead" />);
               }
             }
 
@@ -126,7 +126,7 @@ class SpreadsheetCoreRecursiveClick extends Component {
                 );
               }
               if (i === keyArr.length - 1) {
-                retSet.push(<div className="endDivider" />);
+                retSet.push(<div key={i+keyArr[i]+valArr[i]+`valz`} className="endDivider" />);
               }
             }
 
