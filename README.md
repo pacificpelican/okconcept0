@@ -13,25 +13,45 @@ ___
 **for development:**
 ___
 
-*Install and run the MongoDB database*
+*Install MongoDB database*
 
 ```bash
 brew install mongodb
-brew services start mongodb
 # or
 **install MongoDB directly**
-mongod
 ```
 
-*Install the app and run:*
+*Download the app with Git:*
+```bash
+git clone <project-git-url>
+cd okConcept0
+```
+
+*Install the app with NPM or Yarn:*
 
 ```bash
 npm install
-npm run dev
 # or
 yarn
+```
+
+*Turn on MongoDB*
+
+```bash
+brew services start mongodb
+# or
+mongod
+```
+
+*Run the app on your local system:*
+
+```bash
+npm run dev
+# or
 yarn dev
 ```
+
+*Open the app default UI in a browser:*
 
 `open http://localhost:3011`
 ___
@@ -40,7 +60,7 @@ ___
   <h3>OkConcept0</h3>
   <h3><a href="http://okconcept0.pacificio.com">🆗</a></h3>
   <h6>
-    an object cycle noSQL database manager by{" "}
+    an object cycle noSQL database manager by 
     <a href="http://danmckeown.info">Dan McKeown</a>
   </h6>
   <br />
@@ -48,7 +68,7 @@ ___
   <br />
   <br />
   <li>
-    You can view objects by entering them into the input at{" "}
+    You can view objects by entering them into the input at 
     <a href="/Objectbrowser">Objectbrowser</a>
   </li>
   <li>
@@ -56,11 +76,11 @@ ___
     can persist the data to MongoDB by pressing the `save to DB` button
   </li>
   <li>
-    Database is saved by default to the Mongo database at the {" "}
+    Database is saved by default to the Mongo database at the  
     `mongodb://localhost:27017/` address
   </li>
   <li>
-    These saved objects can be viewed at <a href="/Desk">Desk</a>{" "}
+    These saved objects can be viewed at <a href="/Desk">Desk</a> 
     (search for seis as the database object name) in chronological
     order
   </li>
@@ -97,21 +117,21 @@ ___
   <h3>API</h3>
   <ul id="routes">
     <li>
-      GET database object collection:{" "}
+      GET database object collection: 
       <code>/api/1/getdbdata/db/seisdb/object/seis</code>
       <span className="info">
         <a href="/Desk">Desk</a>, <a href="/Spiral">Spiralviewer</a>
       </span>
     </li>
     <li>
-      GET one database object by locator:{" "}
+      GET one database object by locator: 
       <code>/api/1/getdbdata/db/seisdb/object/seis/tuple/14206</code>
       <span className="info">
         <a href="/View">View</a>
       </span>
     </li>
     <li>
-      POST create new database object:{" "}
+      POST create new database object: 
       <code>
         /api/1/saveobjectdata/db/seisdb/obj/seis/newdata/%22%20%7B%20%5C%22name%5C%22%3A%20%5C%22Bogey%5C%22%20%7D%22
       </code>
@@ -120,7 +140,7 @@ ___
       </span>
     </li>
     <li>
-      POST (shallow) create new database object:{" "}
+      POST (shallow) create new database object: 
       <code>
         /api/1/saveobjectdatashallow/db/spiraldb/obj/notes/newdata/%7B%22note%22%3A%22I%20love%20the%20cat!%22%2C%22savedAt%22%3A1554680275455%7D
       </code>
@@ -129,7 +149,7 @@ ___
       </span>
     </li>
     <li>
-      POST update existing database object by locator property:{" "}
+      POST update existing database object by locator property: 
       <code>
         /api/1/updatedata/db/seisdb/object/seis/objprop/Bogey/objkey/name/newval/Belle/tuple/99372
       </code>
@@ -138,7 +158,7 @@ ___
       </span>
     </li>
     <li>
-      POST delete existing database object by locator property:{" "}
+      POST delete existing database object by locator property: 
       <code>/api/1/deletedata/db/seisdb/object/seis/tuple/15540</code>
       <span className="info">
         <a href="/Delete">Delete</a>
@@ -149,46 +169,9 @@ ___
 
 ---
 
-[![Deploy to now](https://deploy.now.sh/static/button.svg)](https://deploy.now.sh/?repo=https://github.com/zeit/next.js/tree/master/examples/custom-server-express)
+### Scaffoled with `create-next-app`
 
-# Custom Express Server example
-
-## How to use
-
-### Using `create-next-app`
-
-Execute [`create-next-app`](https://github.com/segmentio/create-next-app) with [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) or [npx](https://github.com/zkat/npx#readme) to bootstrap the example:
-
-```bash
-npx create-next-app --example custom-server-express custom-server-express-app
-# or
-yarn create next-app --example custom-server-express custom-server-express-app
-```
-
-### Download manually
-
-Download the example:
-
-```bash
-curl https://codeload.github.com/zeit/next.js/tar.gz/canary | tar -xz --strip=2 next.js-canary/examples/custom-server-express
-cd custom-server-express
-```
-
-Install it and run:
-
-```bash
-npm install
-npm run dev
-# or
-yarn
-yarn dev
-```
-
-Deploy it to the cloud with [now](https://zeit.co/now) ([download](https://zeit.co/download))
-
-```bash
-now
-```
+[`create-next-app`](https://github.com/segmentio/create-next-app) 
 
 ---
 
@@ -200,10 +183,6 @@ now
 
 ---
 
-## The idea behind the example
+## Connection to SEIS project
 
-Most of the times the default Next server will be enough but sometimes you want to run your own server to customize routes or other kind of the app behavior. Next provides a [Custom server and routing](https://github.com/zeit/next.js#custom-server-and-routing) so you can customize as much as you want.
-
-Because the Next.js server is just a node.js module you can combine it with any other part of the node.js ecosystem. in this case we are using express to build a custom router on top of Next.
-
-The example shows a server that serves the component living in `pages/a.js` when the route `/b` is requested and `pages/b.js` when the route `/a` is accessed. This is obviously a non-standard routing strategy. You can see how this custom routing is being made inside `server.js`.
+- OkConcept0 started as a fork of the [Seis project](https://seis.pacificio.com) but for MongoDB instead of LokiJS.

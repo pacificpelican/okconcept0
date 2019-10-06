@@ -6,12 +6,12 @@ export default () => (
     powered by{" "}
     <b>
       {" "}
-      <a href="http://okconcept0.pacificio.com">OkConcept0</a>{" via "}
-      <a href="http://seis.pacificio.com">SEIS</a>{" "}&{" "}
-      <a href="http://mlBench.pacificio.com">mlBench</a>{" "}
+      <a href="https://okconcept0.pacificio.com">OkConcept0</a>{" via "}
+      <a href="https://seis.pacificio.com">SEIS</a>{" "}&{" "}
+      <a href="https://roost.pacificio.com/mlbench">mlBench</a>{" "}
       <a href="https://github.com/pacificpelican/mlBench">💻</a>{" "}/{" "}
-      <a href="http://applepicker.pacificio.com">apple-picker</a>{" "}
-      <a href="https://github.com/pacificpelican/apple-picker">
+      <a href="https://quarter.pacificio.com">Quarter</a>{" "}
+      <a href="https://github.com/pacificpelican/quarter">
         💻
       </a>
     </b>
