@@ -55,34 +55,6 @@ function postDataWildcard(
         console.log(result);
       }
     );
-
-    // if (
-    //   typeof record[`${objkey}`] !== "undefined" &&
-    //   record[`${objkeyg}`] !== null
-    // ) {
-    //   console.log("0 levels deep in object; key: " + objkey);
-    //   //  record[`${objkeyString}`] = newVal;
-    //   collection.updateOne(
-    //     { [objkey]: objval },
-    //     { $set: { [objkey]: newVal } },
-    //     function(err, result) {
-    //       // assert.equal(err, null);
-    //       // assert.equal(1, result.result.n);
-    //       console.log("Updated the document");
-    //       console.log(result);
-    //     }
-    //   );
-    // } else {
-    //   console.log(
-    //     "object is more than 1 level deep in object: currently only updates top level properties"
-    //   );
-    //   console.log(record);
-
-    //   Object.keys(record).forEach(function(item) {
-    //     console.log(item); // key
-    //     console.log(record[item]); // value
-    //   });
-    // }
   });
 }
 
@@ -212,6 +184,7 @@ app.prepare().then(() => {
         }
       });
       console.log("data that should have been added " + req.params.newdata);
+      res.send(Object.assign({}, { Response: "ok - POST save object data" }));
     }
   );
 
@@ -254,6 +227,7 @@ app.prepare().then(() => {
   server.post(
     "/api/1/saveobjectdatashallow/db/:db/obj/:obj/newdata/:newdata",
     (req, res) => {
+      console.log("about to add tuple [shallow] - " + req.params.db + " | " + req.params.obj);
       MongoClient.connect(mongoAddress, function(err, db) {
         if (err) {
           console.log(err);
@@ -276,6 +250,7 @@ app.prepare().then(() => {
         }
       });
       console.log("data that should have been added " + req.params.newdata);
+      res.send(Object.assign({}, { Response: "ok - POST save object data (shallow)" }));
     }
   );
 
