@@ -78,41 +78,6 @@ class Desk extends Component {
     let cont = this.runDBlookup(this.state.userObjectAsk, this.state.userDBrequest);
   }
 
-  forEachDb(objArr) {
-    for (let o of objArr) {
-      let keyset = Object.keys(o);
-
-      if (keyset !== this.keyLibrary.keys()) {
-        for (let z of keyset) {
-          this.keyLibrary.add(z);
-        }
-      }
-    }
-    return null;
-  }
-
-  forEachDbEntry(objArr) {
-    for (let o of objArr) {
-      let innerSet = new Set(Object.keys(o));
-      let innerLibrary = new Set([...this.keyLibrary]);
-
-      if (eqSet(innerSet, innerLibrary)) {
-        console.log("matches keyLibrary");
-      } else {
-        console.log("fails to match keyLibrary");
-      }
-
-      let keyset = new Set(Object.keys(o));
-
-      if (keyset !== this.keyLibrary.keys()) {
-        for (let z of keyset) {
-          this.keyLibrary.add(z);
-        }
-      }
-    }
-    return null;
-  }
-
   componentDidMount = () => {
     if (this.props.userObjectAsk) {
       this.setState({userObjectAsk: this.props.userObjectAsk})
