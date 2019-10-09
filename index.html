@@ -25,7 +25,7 @@
             </section>
             <p id="riding">
               OkConcept0 is the answer to the question: what if <a href="https://seis.pacificio.com">the SEIS project</a> was
-              forked and its data store was changed from JSON (LokiJS) to BSON (<a href="https://www.mongodb.com/"">MongoDB</a>) while keeping the same REST API?
+              forked and its data store was changed from JSON (LokiJS) to BSON (<a href="https://www.mongodb.com/"">MongoDB</a>) while keeping the same NodeJS-based REST API?
             </p>
             <aside id="github">
               <div class="icon-preview">
@@ -48,19 +48,19 @@
                 <h3>App Component Tree</h3>
               </lh>
               <li>
-                <a href="https://github.com/pacificpelican/seis/blob/master/pages/Objectbrowser.js">Objectbrowser</a> → <a
-                  href="https://github.com/pacificpelican/seis/blob/master/pages/SpreadsheetObjectbrowser.js">SpreadsheetObjectbrowser</a>
+                <a href="https://github.com/pacificpelican/okconcept0/blob/master/pages/Objectbrowser.js">Objectbrowser</a> → <a
+                  href="https://github.com/pacificpelican/okconcept0/blob/master/pages/SpreadsheetObjectbrowser.js">SpreadsheetObjectbrowser</a>
                 → <a
-                  href="https://github.com/pacificpelican/seis/blob/master/pages/SpreadsheetCoreRecursive.js">SpreadsheetCoreRecursive</a>
+                  href="https://github.com/pacificpelican/okconcept0/blob/master/pages/SpreadsheetCoreRecursive.js">SpreadsheetCoreRecursive</a>
               </li>
               <li>
-                <a href="https://github.com/pacificpelican/seis/blob/master/pages/Desk.js">Desk</a> → <a
-                  href="https://github.com/pacificpelican/seis/blob/master/pages/Spreadsheet.js">Spreadsheet</a> → <a
-                  href="https://github.com/pacificpelican/seis/blob/master/pages/SpreadsheetCoreRecursiveClick.js">SpreadsheetCoreRecursiveClick</a>
+                <a href="https://github.com/pacificpelican/okconcept0/blob/master/pages/Desk.js">Desk</a> → <a
+                  href="https://github.com/pacificpelican/okconcept0/blob/master/pages/Spreadsheet.js">Spreadsheet</a> → <a
+                  href="https://github.com/pacificpelican/okconcept0/blob/master/pages/SpreadsheetCoreRecursiveClick.js">SpreadsheetCoreRecursiveClick</a>
               </li>
               <li>
-                <a href="https://github.com/pacificpelican/seis/blob/master/pages/View.js">View</a> → <a
-                  href="https://github.com/pacificpelican/seis/blob/master/pages/SpreadsheetCoreRecursive.js">SpreadsheetCoreRecursive</a>
+                <a href="https://github.com/pacificpelican/okconcept0/blob/master/pages/View.js">View</a> → <a
+                  href="https://github.com/pacificpelican/okconcept0/blob/master/pages/SpreadsheetCoreRecursive.js">SpreadsheetCoreRecursive</a>
               </li>
             </ul>
             <ul id="routes">
@@ -71,15 +71,15 @@
                 GET database object collection:
                 <code>/api/1/getdbdata/db/seisdb/object/seis</code>
                 <span className="info">
-                  <a href="https://github.com/pacificpelican/seis/blob/master/pages/Desk.js">Desk</a>, <a
-                    href="https://github.com/pacificpelican/seis/blob/master/pages/Spiralviewer.js">Spiralviewer</a>
+                  <a href="https://github.com/pacificpelican/okconcept0/blob/master/pages/Desk.js">Desk</a>, <a
+                    href="https://github.com/pacificpelican/okconcept0/blob/master/pages/Spiralviewer.js">Spiralviewer</a>
                 </span>
               </li>
               <li>
                 GET one database object by locator:
                 <code>/api/1/getdbdata/db/seisdb/object/seis/tuple/14206</code>
                 <span className="info">
-                  <a href="https://github.com/pacificpelican/seis/blob/master/pages/View.js">View</a>
+                  <a href="https://github.com/pacificpelican/okconcept0/blob/master/pages/View.js">View</a>
                 </span>
               </li>
               <li>
@@ -88,14 +88,14 @@
                     /api/1/saveobjectdata/db/seisdb/obj/seis/newdata/%22%20%7B%20%5C%22name%5C%22%3A%20%5C%22Bogey%5C%22%20%7D%22
                   </code>
                 <span className="info">
-                  <a href="https://github.com/pacificpelican/seis/blob/master/pages/Objectbrowser.js">Objectbrowser</a>
+                  <a href="https://github.com/pacificpelican/okconcept0/blob/master/pages/Objectbrowser.js">Objectbrowser</a>
                 </span>
               </li>
               <li>
                 POST (shallow) create new database object:
                 <code>/api/1/saveobjectdatashallow/db/spiraldb/obj/notes/newdata/%7B%22note%22%3A%22I%20love%20the%20cat!%22%2C%22savedAt%22%3A1554680275455%7D</code>
                 <span className="info">
-                  <a href="https://github.com/pacificpelican/seis/blob/master/pages/Spiral.js">Spiral</a>
+                  <a href="https://github.com/pacificpelican/okconcept0/blob/master/pages/Spiral.js">Spiral</a>
                 </span>
               </li>
               <li>
@@ -104,14 +104,14 @@
                     /api/1/updatedata/db/seisdb/object/seis/objprop/Bogey/objkey/name/newval/Belle/tuple/99372
                   </code>
                 <span className="info">
-                  <a href="https://github.com/pacificpelican/seis/blob/master/pages/Edit.js">Edit</a>
+                  <a href="https://github.com/pacificpelican/okconcept0/blob/master/pages/Edit.js">Edit</a>
                 </span>
               </li>
               <li>
                 POST delete existing database object by locator property:
                 <code>/api/1/deletedata/db/seisdb/object/seis/tuple/15540</code>
                 <span className="info">
-                  <a href="https://github.com/pacificpelican/seis/blob/master/pages/Delete.js">Delete</a>
+                  <a href="https://github.com/pacificpelican/okconcept0/blob/master/pages/Delete.js">Delete</a>
                 </span>
               </li>
             </ul>

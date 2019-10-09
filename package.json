@@ -1,6 +1,6 @@
 {
   "name": "okconcept0-website",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "web site for Node API tool",
   "main": "index.html",
   "dependencies": {},
