@@ -16,10 +16,6 @@ class About extends Component {
     entry: ""
   };
 
-  constructor(props) {
-    super();
-  }
-
   goBack() {
     window.history.back();
   }

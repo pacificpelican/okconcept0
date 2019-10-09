@@ -175,13 +175,13 @@ ___
 
 ---
 
-### Scaffoled with `create-next-app`
+### OkConcept0 is built on modern web technologies
 
-[`create-next-app`](https://github.com/segmentio/create-next-app) 
+okconcept0 is from [Pacific IO](https://pacificio.com) and uses [NextJS](https://nextjs.org/) for front-end with [custom server and routing](https://github.com/zeit/next.js#custom-server-and-routing) and [ExpressJS](https://expressjs.com/) and was scaffolded using [create-next-app](https://open.segment.com/create-next-app/).  The UI is built with [ReactJS](https://reactjs.org/) components.  The app's databases are powered by [MongoDB](https://mongodb.com).
 
 ---
 
-*Known Issues*
+### Known Issues
 
 - the Edit functionality will only edit top level object properties
 - arrays of JSON passed into Objectbrowser will not save since they are not objects
@@ -191,4 +191,4 @@ ___
 
 ## Connection to SEIS project
 
-- OkConcept0 started as a fork of the [Seis project](https://seis.pacificio.com) with the difference being that OkConcept0 uses MongoDB instead of LokiJS as its database backend (while maintaing v1 API compatability).
+- OkConcept0 started as a fork of the [Seis project](https://seis.pacificio.com) with the difference being that OkConcept0 uses MongoDB instead of LokiJS as its database backend (while maintaing v1 data API compatability).

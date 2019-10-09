@@ -5,13 +5,7 @@ import React, { Component } from "react";
 
 import SpreadsheetCoreRecursiveClick from "./SpreadsheetCoreRecursiveClick";
 
-function noTrueArraysMan(objArr) {
-  let returnArr = [];
-  for (let i = 0; i < objArr.length; i++) {
-    returnArr.push(objArr[i]);
-  }
-  return returnArr;
-}
+import noTrueArraysMan from "./notruearraysman";
 
 class Spreadsheet extends Component {
   keyLibrary = new Set();
