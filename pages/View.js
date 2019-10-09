@@ -1,4 +1,4 @@
-//  seis copyright 2017-2019
+//  okconcept0 copyright 2017-2019
 //  View.js
 //  via mlBench & danmckeown.info
 import React, { Component } from "react";

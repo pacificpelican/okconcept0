@@ -1,6 +1,6 @@
 {
-  "name": "OkConcept0",
-  "version": "1.2.4",
+  "name": "okconcept0",
+  "version": "1.2.5",
   "scripts": {
     "dev": "node server.js",
     "build": "next build",

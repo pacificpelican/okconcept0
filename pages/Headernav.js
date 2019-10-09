@@ -1,4 +1,4 @@
-//  seis copyright 2017-2019
+//  okconcept0 copyright 2017-2019
 //  Headernav.js
 //  via apple-picker, mlBench, and danmckeown.info #5
 export default () => (
@@ -12,7 +12,7 @@ export default () => (
           <a href="../../About">About</a>
         </li>
         <li>
-          <a href="https://github.com/pacificpelican/OkConcept0">
+          <a href="https://github.com/pacificpelican/okconcept0">
             Code
           </a>
         </li>

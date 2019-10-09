@@ -1,10 +1,16 @@
 **OkConcept0**
 
+*♘* *🐴*
+
 *a port of [Seis](https://bitbucket.org/pacificpelican/seis/src) for MongoDB*
 
 *by [Dan McKeown](http://danmckeown.info) at [pacificIO](https://pacificio.com) copyright 2019*
 
 ===
+
+![okcconcept0 logo with two horses](./okconcept0logo.jpg)
+
+---
 
 *QuickStart*
 
@@ -185,4 +191,4 @@ ___
 
 ## Connection to SEIS project
 
-- OkConcept0 started as a fork of the [Seis project](https://seis.pacificio.com) but for MongoDB instead of LokiJS.
+- OkConcept0 started as a fork of the [Seis project](https://seis.pacificio.com) with the difference being that OkConcept0 uses MongoDB instead of LokiJS as its database backend (while maintaing v1 API compatability).

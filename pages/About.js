@@ -1,4 +1,4 @@
-//  seis copyright 2017-2019
+//  okconcept0 copyright 2017-2019
 //  About.js
 //  via mlBench & danmckeown.info
 import React, { Component } from "react";
@@ -34,7 +34,7 @@ class About extends Component {
         <Headernav />
 
         <div id="joeypc">
-          <span id="animated">{"🐕"}</span>
+          <span id="animated">{"🐎"}</span>
         </div>
 
         <h1 id="desk">

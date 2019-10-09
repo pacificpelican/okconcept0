@@ -1,4 +1,4 @@
-//  seis copyright 2017-2019
+//  okconcept0 copyright 2017-2019
 //  Desk.js
 //  via mlBench & danmckeown.info
 import React, { Component } from "react";
@@ -11,8 +11,6 @@ import Card from '@material-ui/core/Card';
 
 import Headernav from "./Headernav";
 import Footernav from "./Footernav";
-
-import eqSet from "./eqset";
 
 import reloadOnce from "./reloadOnce";
 

@@ -1,4 +1,4 @@
-//  seis SpreadsheetCoreRecursiveClick copyright 2017-2018
+//  okconcept0 SpreadsheetCoreRecursiveClick copyright 2017-2018
 //  SpreadsheetCoreRecursiveClick.js
 //  mlBench & danmckeown.info
 import React, { Component } from "react";

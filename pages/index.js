@@ -13,7 +13,8 @@ export default () => (
       ⬅️ back
     </button>
     <Headernav />
-    <h2 id="six">{'⚅'}7️⃣ OkConcept0</h2>
+    <h2 id="six">{'♘⚅'}🐴 OkConcept0</h2>
+    <span id="horses"> </span>
     <h4>Components</h4>
     <ul id="seis">
       <li>
@@ -62,11 +63,7 @@ export default () => (
           <a>About</a>
         </Link>
       </li>
-      <li>
-        <Link href={{ pathname: "/posts", query: { id: "2" } }} as="/posts/2">
-          <a>post #2</a>
-        </Link>
-      </li>
+      
     </ul>
     <footer id="seisFooter">
       <a href="https://pacificio.com">pacificIO</a>

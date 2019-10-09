@@ -1,4 +1,4 @@
-//  seis copyright 2017-2019
+//  okconcept0 copyright 2017-2019
 //  Spreadsheet.js
 //  via mlBench & danmckeown.info
 import React, { Component } from "react";
@@ -11,13 +11,6 @@ function noTrueArraysMan(objArr) {
     returnArr.push(objArr[i]);
   }
   return returnArr;
-}
-
-function eqSet(as, bs) {
-  //  via https://stackoverflow.com/questions/31128855/comparing-ecma6-sets-for-equality
-  if (as.size !== bs.size) return false;
-  for (var a of as) if (!bs.has(a)) return false;
-  return true;
 }
 
 class Spreadsheet extends Component {
