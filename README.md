@@ -16,21 +16,13 @@
 
 ___
 
-**for development:**
+**installation:**
 ___
-
-*Install MongoDB database*
-
-```bash
-brew install mongodb
-# or
-**install MongoDB directly**
-```
 
 *Download the app with Git:*
 ```bash
-git clone <project-git-url>
-cd okConcept0
+git clone https://github.com/pacificpelican/okconcept0.git
+cd okconcept0
 ```
 
 *Install the app with NPM or Yarn:*
@@ -40,6 +32,19 @@ npm install
 # or
 yarn
 ```
+
+*Install MongoDB database*
+
+```bash
+brew install mongodb
+# or
+**install MongoDB directly**
+```
+
+___
+
+**running:**
+___
 
 *Turn on MongoDB*
 
@@ -57,9 +62,11 @@ npm run dev
 yarn dev
 ```
 
-*Open the app default UI in a browser:*
+*Open the app default UI in a browser (or make requests via the API):*
 
 `open http://localhost:3011`
+
+`curl http://localhost:3011/api/1/getdbdata/db/seisdb/object/seis`
 ___
 
 <section id="propsInfo">
