@@ -4,10 +4,6 @@
 import React, { Component } from "react";
 
 class SpreadsheetCoreRecursive extends Component {
-  constructor() {
-    super();
-  }
-
   render(props) {
     var g;
     if (this.props.spreadsheetdata[0] !== undefined) {

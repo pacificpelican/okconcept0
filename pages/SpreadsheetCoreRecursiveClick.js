@@ -9,10 +9,6 @@ let lastkey = null;
 class SpreadsheetCoreRecursiveClick extends Component {
   table = null;
 
-  constructor() {
-    super();
-  }
-
   render(props) {
     let theStore = this.props.store;
     let theTable = this.props.table;

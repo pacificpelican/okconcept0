@@ -6,7 +6,7 @@
 
 *by [Dan McKeown](http://danmckeown.info) at [pacificIO](https://pacificio.com) copyright 2019*
 
-===
+---
 
 ![okcconcept0 logo with two horses](./okconcept0logo.jpg)
 

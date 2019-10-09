@@ -202,12 +202,12 @@ class About extends Component {
             display: block;
           }
           #appTree ul#routes li {
-            background: lightgreen;
+            background: #9ee89b;
             margin-block-end: calc(1vh + 10px);
           }
           #appTree ul#routes span {
             margin-block-start: calc(0.5vh + 5px);
-            background: lightblue;
+            background: #faf6a5;
           }
           #appTree ul#routes code {
             margin-block-start: calc(0.5vh + 5px);

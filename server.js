@@ -41,7 +41,6 @@ function postDataWildcard(
   let collectionName = table;
 
   MongoClient.connect(mongoAddress, function(err, db) {
-    // Get the documents collection
     let collection = db.collection(`${collectionName}`);
     let record = collection;
 
@@ -49,8 +48,6 @@ function postDataWildcard(
       { [objkey]: objval },
       { $set: { [objkey]: newVal } },
       function(err, result) {
-        // assert.equal(err, null);
-        // assert.equal(1, result.result.n);
         console.log("Updated the document");
         console.log(result);
       }
@@ -66,7 +63,6 @@ function deleteDataWildcard(
   objkey = "description",
   newVal = "__"
 ) {
-  //  the last 3 parameters can be null
   console.log(table, tuple);
   let collectionName = table;
   console.log("to delete: " + tuple);
@@ -236,7 +232,6 @@ app.prepare().then(() => {
           console.log("about to add tuple");
           console.log(req.params.newdata);
           let serverObject = JSON.parse(req.params.newdata);
-          //  serverObject = JSON.parse(serverObject);
           console.log(serverObject);
 
           let dbObject = Object.assign(serverObject, {

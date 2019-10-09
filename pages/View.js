@@ -24,10 +24,6 @@ class View extends Component {
     dbdataArr: []
   };
 
-  constructor(props) {
-    super();
-  }
-
   runDBlookup(item = null, dbOBJ = 'seis', db = 'seisdb') {
     let that = this;
     let dest = "/api/1/getdbdata/db/" + db + "/object/" + dbOBJ + "/tuple/" + item;
