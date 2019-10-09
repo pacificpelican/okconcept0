@@ -1,3 +1,6 @@
 .next
 node_modules
+db/seisdb.json
+db/.gitignore
+db/
 .DS_Store

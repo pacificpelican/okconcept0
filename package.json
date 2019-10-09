@@ -1,32 +1,21 @@
 {
-  "name": "okconcept0",
-  "version": "1.2.6",
+  "name": "okconcept0-website",
+  "version": "0.1.0",
+  "description": "web site for Node API tool",
+  "main": "index.html",
+  "dependencies": {},
+  "devDependencies": {},
   "scripts": {
-    "dev": "node server.js",
-    "build": "next build",
-    "start": "cross-env NODE_ENV=production node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pacificpelican/okconcept0.git"
+  },
+  "author": "Dan McKeown",
   "license": "ISC",
-  "author": {
-    "email": "dj@sf3am.com",
-    "name": "Dan McKeown",
-    "copyright": "2019"
+  "bugs": {
+    "url": "https://github.com/pacificpelican/okconcept0/issues"
   },
-  "dependencies": {
-    "express": "^4.14.0",
-    "next": "^8.1.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "@material-ui/core": "^3.9.2",
-    "evergreen-ui": "^4.14.1",
-    "grommet": "^2.6.5",
-    "object-array-converter": " ^1.0.1",
-    "styled-components": "^4.2.0",
-    "@smooth-ui/core-sc": "^10.0.4",
-    "mongodb": "^2.2.28",
-    "cors": "^2.8.5"
-  },
-  "devDependencies": {
-    "cross-env": "^5.2.0"
-  }
+  "homepage": "https://github.com/pacificpelican/okconcept0#readme"
 }
