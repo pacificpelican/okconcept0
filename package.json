@@ -1,6 +1,6 @@
 {
   "name": "okconcept0-website",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "web site for Node API tool",
   "main": "index.html",
   "dependencies": {},
@@ -17,5 +17,5 @@
   "bugs": {
     "url": "https://github.com/pacificpelican/okconcept0/issues"
   },
-  "homepage": "https://github.com/pacificpelican/okconcept0#readme"
+  "homepage": "https://okconcept0.pacificio.com"
 }
