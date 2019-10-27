@@ -23,7 +23,7 @@ class SpreadsheetCoreRecursiveClick extends Component {
     return (
       <div id="desk" className="mlBench-content">
         <section className="keylibrary">
-          {g.map(function(interVal) {
+          {g.map(function (interVal) {
             let valArr = Object.keys(interVal);
 
             let retSet = [];
@@ -42,7 +42,7 @@ class SpreadsheetCoreRecursiveClick extends Component {
           })}
         </section>
         <section className="datalibrary">
-          {g.map(function(interVal) {
+          {g.map(function (interVal) {
             let keyArr = Object.keys(interVal);
             let valArr = Object.values(interVal);
 
@@ -62,7 +62,7 @@ class SpreadsheetCoreRecursiveClick extends Component {
                 );
               }
               if (i === keyArr.length - 1) {
-                retSet.push(<div key={i+keyArr[i]+valArr[i]+`header`} className="endDividerHead" />);
+                retSet.push(<div key={i + keyArr[i] + valArr[i] + `header`} className="endDividerHead" />);
               }
             }
 
@@ -122,7 +122,7 @@ class SpreadsheetCoreRecursiveClick extends Component {
                 );
               }
               if (i === keyArr.length - 1) {
-                retSet.push(<div key={i+keyArr[i]+valArr[i]+`valz`} className="endDivider" />);
+                retSet.push(<div key={i + keyArr[i] + valArr[i] + `valz`} className="endDivider" />);
               }
             }
 

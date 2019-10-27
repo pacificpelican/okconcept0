@@ -16,7 +16,7 @@ export default class Spiral extends Component {
     this.saveNoteToDB(this.state.note);
   }
   saveNoteToDB(note) {
-    let noteObj = Object.assign({}, {note: note, savedAt: Date.now()});
+    let noteObj = Object.assign({}, { note: note, savedAt: Date.now() });
     this.saveObjectToDatabase(noteObj);
   }
   saveObjectToDatabase = (
@@ -55,15 +55,15 @@ export default class Spiral extends Component {
       });
   };
   render() {
-    return(
+    return (
       <React.Fragment>
         <div id="spiralContainer">
 
           <header id="spiral-header">
-              <h1 id="spiral-header--heading">
-                🌀 Notes 
+            <h1 id="spiral-header--heading">
+              🌀 Notes
               </h1>
-            </header>
+          </header>
 
           <main id="spiral-main">
             <textarea id="spiral-main--input" onChange={this.updateNote}>
@@ -72,7 +72,7 @@ export default class Spiral extends Component {
               save note
             </button>
           </main>
-        
+
           <footer id="spiralFooter">
             <br />
             <a href="https://pacificio.com">from pacificIO</a>
@@ -82,7 +82,7 @@ export default class Spiral extends Component {
           <Headernav />
 
         </div>
-       
+
         <style jsx>{`
           header, footer, footer a {
             font-family: "Hack", "Fira Code", "Inconsolata", "Anonymous Pro", Menlo, monospace;

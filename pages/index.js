@@ -63,7 +63,7 @@ export default () => (
           <a>About</a>
         </Link>
       </li>
-      
+
     </ul>
     <footer id="seisFooter">
       <a href="https://pacificio.com">pacificIO</a>

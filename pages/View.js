@@ -51,7 +51,7 @@ class View extends Component {
   }
 
   lookUp = () => {
-    const {router} = this.props;
+    const { router } = this.props;
     const tuple = router.query.tuple;
     let store = router.query.store;
     let table = router.query.table;
@@ -59,7 +59,7 @@ class View extends Component {
   }
 
   render(props) {
-    const {router} = this.props;
+    const { router } = this.props;
     const tuple = router.query.tuple;
     let store = router.query.store;
     let table = router.query.table;
@@ -71,7 +71,7 @@ class View extends Component {
         </button>
 
         <Headernav />
-        
+
         <h1 id="desk">
           Seis Object Viewer<span id="rollLink">
             {" "}
@@ -80,18 +80,18 @@ class View extends Component {
             </a>
           </span>
         </h1>
-        
+
         <section id="user-input">
-         
+
         </section>
         <Card>
           <section id="propsInfo">
             <span>
-            tuple: {tuple}
-            <br />
-            table: {table}
-            <br />
-            store: {store}
+              tuple: {tuple}
+              <br />
+              table: {table}
+              <br />
+              store: {store}
             </span>
           </section>
         </Card>
@@ -105,7 +105,7 @@ class View extends Component {
         </section>
 
         <Footernav />
-        
+
         <style jsx global>{`
           h1#desk, aside {
             font-family: Futura, "Ubuntu", "Lucida Grande", "Roboto", Helvetica,

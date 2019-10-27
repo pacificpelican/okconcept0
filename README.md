@@ -2,6 +2,12 @@
 
 *♘* *🐴*
 
+*OkConcept0:*
+
+⚬ an API server for creating, reading, updating and destroying objects in MongoDB
+
+⚬ a UI for interacting with the API
+
 *a port of [Seis](https://bitbucket.org/pacificpelican/seis/src) for MongoDB*
 
 *by [Dan McKeown](http://danmckeown.info) at [pacificIO](https://pacificio.com) copyright 2019*

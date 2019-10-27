@@ -92,7 +92,7 @@ class Objectbrowser extends Component {
   }
 
   pickSeis = () => {
-    this.setState({ userObjectAsk: "seis"});
+    this.setState({ userObjectAsk: "seis" });
   }
 
   handleTABLEValueChange = (event) => {

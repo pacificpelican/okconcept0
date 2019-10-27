@@ -34,7 +34,7 @@ class Delete extends Component {
   }
 
   handlesubmit = (event) => {
-    const {router} = this.props;
+    const { router } = this.props;
     console.log("about to update collection");
     let cont = this.letServerUpdate(router.query.store, router.query.table, router.query.tuple);
   }
@@ -48,8 +48,8 @@ class Delete extends Component {
 
     console.log("dest: " + dest);
 
-    fetch(dest, {method: 'post'})
-      .then(function(response) {
+    fetch(dest, { method: 'post' })
+      .then(function (response) {
         if (response.ok) {
           console.log("response ok");
           return response.json();
@@ -57,15 +57,15 @@ class Delete extends Component {
         else {
           throw new Error(response.Error);
         }
-    })
-      .then(function(myReturn) {
+      })
+      .then(function (myReturn) {
         console.log(myReturn);
-    });
+      });
   }
 
   componentDidMount(props) {
-    const {router} = this.props;
-    this.setState({userObjectAsk : router.query.val});
+    const { router } = this.props;
+    this.setState({ userObjectAsk: router.query.val });
   }
 
   goBack() {
@@ -73,7 +73,7 @@ class Delete extends Component {
   }
 
   render(props) {
-    const {router} = this.props;
+    const { router } = this.props;
     const tuple = router.query.tuple;
     let store = router.query.store;
     let table = router.query.table;
@@ -85,7 +85,7 @@ class Delete extends Component {
         </button>
 
         <Headernav />
-        
+
         <h1 id="desk">
           apple-picker Object Deleter<span id="rollLink">
             {" "}
@@ -94,7 +94,7 @@ class Delete extends Component {
             </a>
           </span>
         </h1>
-        
+
         <section id="user-input">
           <Button size="lg" onClick={this.handlesubmit} variant="danger" fontFamily="monospace" id="lookupDB">
             delete from DB
@@ -103,17 +103,17 @@ class Delete extends Component {
         <Card>
           <section id="propsInfo">
             <span>
-            tuple: {tuple}
-            <br />
-            table: {table}
-            <br />
-            store: {store}
+              tuple: {tuple}
+              <br />
+              table: {table}
+              <br />
+              store: {store}
             </span>
           </section>
         </Card>
 
         <Footernav />
-        
+
         <style jsx global>{`
           h1#desk, aside {
             font-family: Futura, "Ubuntu", "Lucida Grande", "Roboto", Helvetica,

@@ -28,7 +28,7 @@ class Edit extends Component {
   };
 
   handlesubmit = event => {
-    const {router} = this.props;
+    const { router } = this.props;
     console.log(router);
     console.log("about to update collection");
     let cont = this.letServerUpdate(
@@ -64,7 +64,7 @@ class Edit extends Component {
     console.log("dest: " + dest);
 
     fetch(dest, { method: "post" })
-      .then(function(response) {
+      .then(function (response) {
         if (response.ok) {
           console.log("response ok");
           return response.json();
@@ -72,13 +72,13 @@ class Edit extends Component {
           throw new Error(response.Error);
         }
       })
-      .then(function(myReturn) {
+      .then(function (myReturn) {
         console.log(myReturn);
       });
   }
 
   componentDidMount(props) {
-    const {router} = this.props;
+    const { router } = this.props;
     this.setState({ userObjectAsk: router.query.val });
   }
 
@@ -87,7 +87,7 @@ class Edit extends Component {
   }
 
   render(props) {
-    const {router} = this.props;
+    const { router } = this.props;
     const tuple = router.query.tuple;
     let val = router.query.val;
     let store = router.query.store;

@@ -13,7 +13,6 @@ export default () => (
       <a href="https://roost.pacificio.com/mlbench">mlBench</a>{" "}
       /{" "}
       <a href="https://quarter.pacificio.com">Quarter</a>{" "}
-      
     </b>
   </footer>
 );

@@ -59,7 +59,7 @@ class Desk extends Component {
   }
 
   pickSeis = () => {
-    this.setState({ userObjectAsk: "seis"});
+    this.setState({ userObjectAsk: "seis" });
   }
 
   handlecValueChange(event) {
@@ -78,10 +78,10 @@ class Desk extends Component {
 
   componentDidMount = () => {
     if (this.props.userObjectAsk) {
-      this.setState({userObjectAsk: this.props.userObjectAsk})
+      this.setState({ userObjectAsk: this.props.userObjectAsk })
     }
     if (this.props.userDBrequest) {
-      this.setState({userDBrequest: this.props.userDBrequest})
+      this.setState({ userDBrequest: this.props.userDBrequest })
     }
   }
 
@@ -110,7 +110,7 @@ class Desk extends Component {
             <span id="db-label">database: </span><Input id="user-db-name-input" onChange={this.handleDBvalChange} value={this.state.userDBrequest} />
           </section>
         </section>
-        
+
         <aside>
           app database table: [<span id="clickSeis" onClick={this.pickSeis}>seis</span>]
           <br />
