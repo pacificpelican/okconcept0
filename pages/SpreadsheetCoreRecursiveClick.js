@@ -78,14 +78,16 @@ class SpreadsheetCoreRecursiveClick extends Component {
                   </span>
                 );
               } else {
+                let newdata = encodeURIComponent(JSON.stringify(valArr[i]));
+                let newdataString = newdata.toString();
                 retSet.push(
                   <span key={valArr[i]} className="valSheetRow">
                     <Link
                       href={{
-                        pathname: "/Edit",
+                        pathname: "/Edit2",
                         query: {
                           tuple: lastkey,
-                          val: valArr[i],
+                          val: newdataString,
                           store: theStore,
                           table: theTable,
                           objprop: keyArr[i]

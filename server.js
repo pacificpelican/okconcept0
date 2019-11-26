@@ -249,6 +249,33 @@ app.prepare().then(() => {
     }
   );
 
+  server.post(
+    "/api/1.6/updatedata/db/:db/object/:obj/objprop/:objprop/objkey/:objkey/newval/:newval/tuple/:tuple",
+    (req, res) => {
+      console.log("running update POST route (v1.6)");
+      console.log("obj: " + req.params.obj);
+
+      var someStr = decodeURIComponent(req.params.objprop);
+      let oldVal = someStr.replace(/['"]+/g, '');
+      console.log("old value: " + oldVal);
+
+      var someOtherStr = decodeURIComponent(req.params.newval);
+      let newVal = someOtherStr.replace(/['"]+/g, '');
+      console.log("new value: " + newVal);
+
+        postDataWildcard(
+          req.params.db,
+          req.params.obj,
+          req.params.tuple,
+          oldVal,
+          req.params.objkey,
+          newVal
+        );
+
+      res.send(Object.assign({}, { Response: "ok - POST update" }));
+    }
+  );
+
   server.get("*", (req, res) => {
     return handle(req, res);
   });
