@@ -139,14 +139,14 @@ ___
       GET database object collection: 
       <code>/api/1/getdbdata/db/seisdb/object/seis</code>
       <span className="info">
-        <a href="/Desk">Desk</a>, <a href="/Spiral">Spiralviewer</a>
+        <a href="/pages/Desk">Desk</a>, <a href="/Spiral">Spiralviewer</a>
       </span>
     </li>
     <li>
       GET one database object by locator: 
       <code>/api/1/getdbdata/db/seisdb/object/seis/tuple/14206</code>
       <span className="info">
-        <a href="/View">View</a>
+        <a href="/pages/View">View</a>
       </span>
     </li>
     <li>
@@ -155,7 +155,7 @@ ___
         /api/1/saveobjectdata/db/seisdb/obj/seis/newdata/%22%20%7B%20%5C%22name%5C%22%3A%20%5C%22Bogey%5C%22%20%7D%22
       </code>
       <span className="info">
-        <a href="/Objectbrowser">Objectbrowser</a>
+        <a href="/pages/Objectbrowser">Objectbrowser</a>
       </span>
     </li>
     <li>
@@ -164,7 +164,7 @@ ___
         /api/1/saveobjectdatashallow/db/spiraldb/obj/notes/newdata/%7B%22note%22%3A%22I%20love%20the%20cat!%22%2C%22savedAt%22%3A1554680275455%7D
       </code>
       <span className="info">
-        <a href="/Spiral">Spiral</a>
+        <a href="/pages/Spiral">Spiral</a>
       </span>
     </li>
     <li>
@@ -173,14 +173,23 @@ ___
         /api/1/updatedata/db/seisdb/object/seis/objprop/Bogey/objkey/name/newval/Belle/tuple/99372
       </code>
       <span className="info">
-        <a href="/Edit">Edit</a>
+        <a href="/pages/Edit">Edit</a>
+      </span>
+    </li>
+    <li>
+      <span>POST update existing database object by locator property:</span>
+      <code>
+        /api/1.6/updatedata/db/seisdb/object/seis/objprop/%2522birds%2522/objkey/wha/newval/birbs/tuple/11749
+      </code>
+      <span className="info">
+        <a href="/pages/Edit2.js">Edit2</a>
       </span>
     </li>
     <li>
       POST delete existing database object by locator property: 
       <code>/api/1/deletedata/db/seisdb/object/seis/tuple/15540</code>
       <span className="info">
-        <a href="/Delete">Delete</a>
+        <a href="/pages/Delete">Delete</a>
       </span>
     </li>
   </ul>

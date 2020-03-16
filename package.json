@@ -1,6 +1,6 @@
 {
   "name": "okconcept0",
-  "version": "1.8.1",
+  "version": "1.8.2",
   "scripts": {
     "dev": "node server.js",
     "build": "next build",
@@ -25,7 +25,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "styled-components": "^4.2.0",
-    "okconceptbrowser": "0.7.0"
+    "okconceptbrowser": "~1.0.0"
   },
   "devDependencies": {
     "cross-env": "^5.2.0"
