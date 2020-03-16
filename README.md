@@ -139,14 +139,14 @@ ___
       GET database object collection: 
       <code>/api/1/getdbdata/db/seisdb/object/seis</code>
       <span className="info">
-        <a href="/pages/Desk">Desk</a>, <a href="/Spiral">Spiralviewer</a>
+        <a href="/pages/Desk.js">Desk</a>, <a href="/Spiral.js">Spiralviewer</a>
       </span>
     </li>
     <li>
       GET one database object by locator: 
       <code>/api/1/getdbdata/db/seisdb/object/seis/tuple/14206</code>
       <span className="info">
-        <a href="/pages/View">View</a>
+        <a href="/pages/View.js">View</a>
       </span>
     </li>
     <li>
@@ -155,7 +155,7 @@ ___
         /api/1/saveobjectdata/db/seisdb/obj/seis/newdata/%22%20%7B%20%5C%22name%5C%22%3A%20%5C%22Bogey%5C%22%20%7D%22
       </code>
       <span className="info">
-        <a href="/pages/Objectbrowser">Objectbrowser</a>
+        <a href="/pages/Objectbrowser.js">Objectbrowser</a>
       </span>
     </li>
     <li>
@@ -164,7 +164,7 @@ ___
         /api/1/saveobjectdatashallow/db/spiraldb/obj/notes/newdata/%7B%22note%22%3A%22I%20love%20the%20cat!%22%2C%22savedAt%22%3A1554680275455%7D
       </code>
       <span className="info">
-        <a href="/pages/Spiral">Spiral</a>
+        <a href="/pages/Spiral.js">Spiral</a>
       </span>
     </li>
     <li>
@@ -173,7 +173,7 @@ ___
         /api/1/updatedata/db/seisdb/object/seis/objprop/Bogey/objkey/name/newval/Belle/tuple/99372
       </code>
       <span className="info">
-        <a href="/pages/Edit">Edit</a>
+        <a href="/pages/Edit.js">Edit</a>
       </span>
     </li>
     <li>
@@ -189,7 +189,7 @@ ___
       POST delete existing database object by locator property: 
       <code>/api/1/deletedata/db/seisdb/object/seis/tuple/15540</code>
       <span className="info">
-        <a href="/pages/Delete">Delete</a>
+        <a href="/pages/Delete.js">Delete</a>
       </span>
     </li>
   </ul>

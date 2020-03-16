@@ -1,6 +1,7 @@
 //  okconcept0 copyright 2017-2019
 //  SpreadsheetCoreRecursive.js
 //  via mlBench & danmckeown.info
+//  DEPRECATED AS OF v1.9.0 (code imported via 'okconceptbrowser' on NPM)
 import React, { Component } from "react";
 
 class SpreadsheetCoreRecursive extends Component {
