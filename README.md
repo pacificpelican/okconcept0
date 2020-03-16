@@ -194,6 +194,12 @@ okconcept0 is from [Pacific IO](https://pacificio.com) and uses [NextJS](https:/
 
 ---
 
+### Okconceptbrowser
+
+This project includes the [OkConceptbrowser project](https://github.com/pacificpelican/okconceptbrowser) as [published to NPM](https://www.npmjs.com/package/okconceptbrowser) as a dependency: Okconceptbrowser (and its dependency [okconceptviewer](https://github.com/pacificpelican/okviewer)) was extracted from this project's `Objectbrowser` component.
+
+---
+
 ### Known Issues
 
 - the Edit functionality will only edit top level object properties
