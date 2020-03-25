@@ -10,7 +10,7 @@ import Button from '@material-ui/core/Button';
 import Headernav from "./Headernav";
 import Footernav from "./Footernav";
 
-import SpreadsheetcoreRecursive from "./SpreadsheetCoreRecursive";
+import SpreadsheetcoreRecursive from "okconceptviewer";
 
 function reloadOnce() {
   console.log("about to reload");
