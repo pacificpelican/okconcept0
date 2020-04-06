@@ -1,10 +1,10 @@
 //  okconcept0 copyright 2017-2019
 //  SpreadsheetObjectbrowser.js
 //  via mlBench & danmckeown.info
-//  DEPRECATED AS OF v1.9.0 (code imported via 'okconceptbrowser' on NPM)
+//  DEPRECATED AS OF v1.8.5
 import React, { Component } from "react";
 
-import SpreadsheetCoreRecursive from "./SpreadsheetCoreRecursive";
+import SpreadsheetCoreRecursive from "okconceptviewer";
 
 class SpreadsheetObjectbrowser extends Component {
   keyLibrary = new Set();

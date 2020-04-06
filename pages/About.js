@@ -139,12 +139,12 @@ class About extends Component {
                 </span>
               </li>
               <li>
-                POST update existing database object by locator property:{" "}
+                <span>POST update existing database object by locator property:</span>
                 <code>
-                  /api/1/updatedata/db/seisdb/object/seis/objprop/Bogey/objkey/name/newval/Belle/tuple/99372
+                  /api/1.6/updatedata/db/seisdb/object/seis/objprop/%2522birds%2522/objkey/wha/newval/birbs/tuple/11749
                 </code>
                 <span className="info">
-                  <a href="/Edit">Edit</a>
+                  <a href="/pages/Edit2.js">Edit2</a>
                 </span>
               </li>
               <li>
